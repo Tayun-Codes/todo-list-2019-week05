@@ -32,8 +32,12 @@ let complete
 
 function addTask() {
     let task = document.querySelector('#task').value;
-    document.querySelector('#tasks').insertAdjacentHTML('beforeend', `<li onclick="completeTask" class='taskItem'>${task}</li>`); //insertAdjacentHTML beforeend, afterend, beforebegin, afterbegin
-    document.querySelector('#task').value = ''; //clears input//
+    if (task==='') {
+        alert('Please input a task');
+    } else {
+        document.querySelector('#tasks').insertAdjacentHTML('beforeend', `<li onclick="completeTask" class='taskItem'>${task}</li>`); //insertAdjacentHTML beforeend, afterend, beforebegin, afterbegin
+        document.querySelector('#task').value = ''; //clears input//
+    }
 }
 
 
