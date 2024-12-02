@@ -1,6 +1,7 @@
 /* Box Model Hack */
 * {
   box-sizing: border-box;
+  text-align: center;
 }
 
 /* Clear fix hack */
@@ -20,6 +21,10 @@
 /******************************************
 /* BASE STYLES
 /*******************************************/
+
+li {
+  text-align: left;
+}
 
 li:hover {
   text-decoration: line-through;
